@@ -1,0 +1,18 @@
+# Entorno virtual
+.venv/
+
+# Variables de entorno 
+.env
+
+# Archivos pesados de datos
+data/raw/*.tif
+data/raw/*.zip
+data/raw/*.kml
+data/raw/*.kmz
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
