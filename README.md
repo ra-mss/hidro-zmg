@@ -31,23 +31,15 @@ trampa memorizando) y permitiendo predicción en sitios no catalogados.
 ## Estructura del proyecto
 
 hidro-zmg/
-
 ├── app/
-
 │   ├── app.py
-
 │   └── model/
-
 ├── data/
-
 |   ├── raw/
-
 │   └── processed/
-
 ├── notebooks/
-
 └── requirements.txt
 
 ## Despliegue
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](URL)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://hidro-zmg.streamlit.app/)
