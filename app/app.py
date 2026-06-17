@@ -83,7 +83,7 @@ with st.sidebar:
     )
     basemap_sel = st.radio(
         "Mapa base",
-        ["OpenStreetMap", "CartoDB Positron", "CartoDB DarkMatter", "Stamen Terrain"],
+        ["OpenStreetMap", "CartoDB Positron", "CartoDB DarkMatter"],
         index=2
     )
     st.divider()
@@ -131,8 +131,7 @@ with tab1:
     tiles_map = {
         "OpenStreetMap" : "OpenStreetMap",
         "CartoDB Positron" : "CartoDB positron",
-        "CartoDB DarkMatter": "CartoDB dark_matter",
-        "Stamen Terrain": "stamenterrain"
+        "CartoDB DarkMatter": "CartoDB dark_matter"
     }
 
     # Creación del DualMap
