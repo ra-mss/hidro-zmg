@@ -290,39 +290,39 @@ with tab3:
     )
 
     def recomendar(row):
-        infra = str(row.get("infra_norm", "")).lower()
+        infra  = str(row.get("infra_norm", "")).lower()
         riesgo = str(row.get("riesgo_final", ""))
-        area = float(row.get("area_m2") or 0)
+        area   = float(row.get("area_m2") or 0)
 
         if "desnivel" in infra:
             return pd.Series({
-                "Intervención": "Bioswale + Rejilla de captación",
-                "Captación est. (m²)": round(area * 2.5, 1),
-                "Co-beneficios": "Reduce velocidad | Filtra contaminantes"
+                "Intervención"        : "Bioswale + rejilla de captación",
+                "Captación est. (m²)" : round(area * 2.5, 1),
+                "Co-beneficios"       : "Reduce velocidad · filtra contaminantes"
             })
         elif "vivienda" in infra and riesgo in ["Crítico", "Alto"]:
             return pd.Series({
-                "Intervención": "Jardín de lluvia en banqueta",
-                "Captación est. (m²)": round(area * 1.8, 1),
-                "Co-beneficios": "Recarga acuífero | Reduce temperatura"
+                "Intervención"        : "Jardín de lluvia en banqueta",
+                "Captación est. (m²)" : round(area * 1.8, 1),
+                "Co-beneficios"       : "Recarga acuífero · reduce temperatura"
             })
         elif "vialidad" in infra:
             return pd.Series({
-                "Intervención": "Pavimento permeable + Árbol de lluvia",
-                "Captación est. (m²)": round(area * 3.0, 1),
-                "Co-beneficios": "Reduce escorrentía | Sombra urbana"
+                "Intervención"        : "Pavimento permeable + árbol de lluvia",
+                "Captación est. (m²)" : round(area * 3.0, 1),
+                "Co-beneficios"       : "Reduce escorrentía · sombra urbana"
             })
         elif riesgo == "Crítico":
             return pd.Series({
-                "Intervención": "Parque inundable (Retention basin)",
+                "Intervención"        : "Parque inundable (retention basin)",
                 "Captación est. (m²)" : round(area * 5.0, 1),
-                "Co-beneficios": "Alta retención | Espacio recreativo"
+                "Co-beneficios"       : "Alta retención · espacio recreativo"
             })
         else:
             return pd.Series({
-                "Intervención": "Cuneta verde",
-                "Captación est. (m²)": round(area * 1.2, 1),
-                "Co-beneficios": "Conduce escorrentía | Mejora agua"
+                "Intervención"        : "Cuneta verde",
+                "Captación est. (m²)" : round(area * 1.2, 1),
+                "Co-beneficios"       : "Conduce escorrentía · mejora agua"
             })
 
     # Filtrar datos y aplicar recomendaciones conservando la geometría
@@ -374,7 +374,7 @@ with tab3:
         centroide = row.geometry.centroid
         interv = row["Intervención"]
         capt = row["Captación est. (m²)"]
-        color_int = COLORES_INTERVENCION.get(interv, "#888888")
+        color_int = COLORES_INTERVENCION.get(interv)
 
         tooltip_html = (
             f"<b>Intervención:</b> {interv}<br>"
