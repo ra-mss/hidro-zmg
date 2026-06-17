@@ -22,10 +22,10 @@ DATA_PATH  = os.path.join(BASE_DIR, "data", "processed", "predicciones_modelo.gp
 MODEL_DIR  = os.path.join(BASE_DIR, "app", "model")
 
 COLORES_RIESGO = {
-    "Bajo"    : "#27AE60",
-    "Medio"   : "#F39C12",
-    "Alto"    : "#E74C3C",
-    "Crítico" : "#8E44AD"
+    "Bajo": "#27AE60",
+    "Medio": "#F39C12",
+    "Alto": "#E74C3C",
+    "Crítico": "#8E44AD"
 }
 ORDEN_RIESGO = ["Bajo", "Medio", "Alto", "Crítico"]
 
